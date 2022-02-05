@@ -130,7 +130,19 @@ function newEmployee() {
                 }
             }
         }
-    ])
+    ]).then(answers => {
+        if(answers.newEmployee) {
+            if(answers.employeeRole === 'Engineer') {
+                const engineer = new Engineer(answers.employeeName, generateId(), answers.employeeEmail, answers.github);
+                team.push(engineer);
+            } else {
+                const intern = new Intern(answers.employeeName, generateId(), answers.employeeEmail, answers.school);
+                team.push(intern);
+            }
+            console.log(team);
+            return newEmployee();
+        }
+    })
 }
 
 promptManager().then(newEmployee);
