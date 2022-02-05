@@ -8,26 +8,14 @@ test('Create Engineer Object', () => {
     expect(engineer.github).toEqual('abc')
 })
 
-// test('Test getName Function', () => {
-//     const engineer = new Engineer('Marcio', 1, 'marcio@gmail.com');
+test('Test getGitHub Function', () => {
+    const engineer = new Engineer('Marcio', 1, 'marcio@gmail.com', 'abc');
 
-//     expect(Engineer.getName()).toEqual('Marcio');
-// })
+    expect(engineer.getGitHub()).toEqual('abc');
+})
 
-// test('Test getId Function', () => {
-//     const engineer = new Engineer('Marcio', 1, 'marcio@gmail.com');
+test('Test getRole Function', () => {
+    const engineer = new Engineer('Marcio', 1, 'marcio@gmail.com', 'abc');
 
-//     expect(Engineer.getId()).toEqual(1);
-// })
-
-// test('Test getEmail Function', () => {
-//     const engineer = new Engineer('Marcio', 1, 'marcio@gmail.com');
-
-//     expect(Engineer.getEmail()).toEqual('marcio@gmail.com');
-// })
-
-// test('Test getRole Function', () => {
-//     const engineer = new Engineer('Marcio', 1, 'marcio@gmail.com');
-
-//     expect(Engineer.getRole()).toEqual('Marcio');
-// })
+    expect(engineer.getRole()).toEqual('Engineer');
+})
