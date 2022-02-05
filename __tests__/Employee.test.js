@@ -28,5 +28,5 @@ test('Test getEmail Function', () => {
 test('Test getRole Function', () => {
     const employee = new Employee('Marcio', 1, 'marcio@gmail.com');
 
-    expect(employee.getRole()).toEqual('Marcio');
+    expect(employee.getRole()).toEqual('Employee');
 })
