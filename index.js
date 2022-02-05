@@ -53,4 +53,84 @@ function promptManager() {
      })
 }
 
-promptManager();
+function newEmployee() {
+    return inquirer.prompt([
+        // Confirm if we would like to add a new employee
+        {
+            type: 'confirm',
+            name: 'newEmployee',
+            message: "Would you like to add a new Employee?",
+            default: true
+        },
+        // If newEmployee is true, ask for Employee's Name
+        {
+            type: 'input',
+            name: 'employeeName',
+            message: "Please enter the employee's name: (Required)",
+            when: confirmEmployee => confirmEmployee.newEmployee === true,
+            validate: name => {
+                if (name) {
+                    return true;
+                } else {
+                    console.log("Please enter a name!");
+                    return false;
+                }
+            }
+        },
+        // If newEmployee is true, ask for Employee's Email
+        {
+            type: 'input',
+            name: 'employeeEmail',
+            message: "Please enter the employee's Email: (Required)",
+            when: confirmEmployee => confirmEmployee.newEmployee === true,
+            validate: email => {
+                if (email) {
+                    return true;
+                } else {
+                    console.log("Please enter a Email!");
+                    return false;
+                }
+            }
+        },
+        // If newEmployee is true, ask for Employee's Role
+        {
+            type: 'list',
+            name: 'employeeRole',
+            message: "Select employee's role: (Required)",
+            when: confirmEmployee => confirmEmployee.newEmployee === true,
+            choices: ['Engineer', 'Intern']
+        },
+        // If employeeRole is Engineer, ask for github username
+        {
+            type: 'input',
+            name: 'github',
+            message: "Enter github username: (Required)",
+            when: role => role.employeeRole === 'Engineer',
+            validate: github => {
+                if (github) {
+                    return true;
+                } else {
+                    console.log("Please enter a github username!");
+                    return false;
+                }
+            }
+        },
+        // if employeeRole is Intern, ask for school Name
+        {
+            type: 'input',
+            name: 'school',
+            message: "Enter school name: (Required)",
+            when: role => role.employeeRole === 'Intern',
+            validate: school => {
+                if (school) {
+                    return true;
+                } else {
+                    console.log("Please enter a School Name!");
+                    return false;
+                }
+            }
+        }
+    ])
+}
+
+promptManager().then(newEmployee);
