@@ -39,18 +39,21 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Front End
 
+* HTML
 * 
 
 
 ## Backend
 
-*
-
+* [node.js](https://nodejs.org/en/)
+* [Jest](https://jestjs.io/)
+* [Inquirer](https://www.npmjs.com/package/inquirer)
+ 
 ## Repo
 
 * (https://github.com/Jump89/em-ploy-me)
 
-## Website
+## Walk Through Video 
 
 * ()
 
