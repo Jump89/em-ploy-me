@@ -22,7 +22,7 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Installation
 
-* First in the terminal enter npm init 
+* First in the terminal enter npm install
 * Followed by node index.js
 * Enter valid prompt data 
 * Choice to enter additional employees 
@@ -68,5 +68,4 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Landing Page Screen Shoot
 
-* ![]()
-* ![]()
+* ![](./src/image/Landing.png)
