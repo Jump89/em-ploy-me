@@ -41,7 +41,7 @@ function engineerHTML(engineer) {
                                 <h5>Email: <a class="card-link" href="mailto:${data.getEmail()}">${data.getEmail()}</a></h5>
                             </div>
                                 <div class="card-body border border-secondary m-2">
-                                <h5>Github: <a class="card-link" href="https://www.github.com/${data.getGitHub()}" target="_blank">${data.getGitHub()}"</a></h5>
+                                <h5>Github: <a class="card-link" href="https://www.github.com/${data.getGitHub()}" target="_blank">${data.getGitHub()}</a></h5>
                             </div>
                         </div>
                     </div>
