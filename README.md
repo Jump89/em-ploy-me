@@ -64,7 +64,7 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Walk Through Video 
 
-* ()
+* (https://watch.screencastify.com/v/kI99RfNbJrevwII7w6te)
 
 ## Landing Page Screen Shoot
 
