@@ -3,7 +3,7 @@ Employee Tracker
 
 ## Description 
 
-* 
+* This is a Node.js Command-Line Application, that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
 
 ## User Story 
 
@@ -14,11 +14,18 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Features
 
-*
+* The ability to add multiple mangers, engineers, and interns.
+* Creates cards with each team member 
+* Creates unique id for each team member
+* Creates links to github and email addresses 
+* Creates an HTML webpage that features all entered employees
 
 ## Installation
 
-* Use application via web browser ()
+* First in the terminal enter npm init 
+* Followed by node index.js
+* Enter valid prompt data 
+* Choice to enter additional employees 
 
 ## Dependencies
 
@@ -35,12 +42,14 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Resources 
 
- * 
+* No Resources for this Application
 
 ## Front End
 
 * HTML
-* 
+* Bootstrap
+* CSS
+* JavaScript
 
 
 ## Backend

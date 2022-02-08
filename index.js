@@ -3,6 +3,8 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const { prompt } = require('inquirer');
+const fs = require('fs');
+const generateHTML = require('./src/html.template');
 let team = [];
 let id = 0;
 // increment ID
@@ -139,10 +141,26 @@ function newEmployee() {
                 const intern = new Intern(answers.employeeName, generateId(), answers.employeeEmail, answers.school);
                 team.push(intern);
             }
-            console.log(team);
             return newEmployee();
         }
     })
 }
 
-promptManager().then(newEmployee);
+promptManager().then(newEmployee).then(() => {
+    return generateHTML(team);
+}).then(htmlData => {
+    fs.writeFile('./dist/index.html', htmlData, err => {
+        if(err) {
+            console.log(err)
+        } else {
+            console.log("Created Index.html");
+        }
+    });
+    fs.copyFile('./src/style.css', './dist/style.css', err => {
+        if(err) {
+            console.log(err)
+        } else {
+            console.log("Copied CSS");
+        }
+    })
+});
